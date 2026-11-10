@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: network-ns                       # Namespace name (must be lowercase to meet RFC 1123 standards)
+  labels:
+    env: dev                             # Environment tier (e.g., prod, dev, practice)
+

@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nw-pod3                          # Pod name
+  namespace: network-ns                  # RFC 1123 compliant (lowercase only)
+  labels:
+    app: paytm                             # Pod labels go directly under metadata
+spec:
+  containers:
+    - name: bus-cont                     # Container identifier
+      image: umeshchandra2001/ticket_booking:bus-v1  # 'image' is singular
+      ports:
+        - containerPort: 80              # Internal application port

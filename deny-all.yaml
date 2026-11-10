@@ -1,0 +1,11 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy                     # Must use PascalCase (NetworkPolicy)
+metadata:
+  name: deny-all                         # Policy name
+  namespace: network-ns                  # Namespace to isolate (defaults to 'default' if omitted)
+spec:
+  podSelector: {}                        # Empty selector selects all pods in the namespace
+  policyTypes:
+    - Ingress                            # Denies all incoming traffic (no ingress rules provided)
+    - Egress                             # Denies all outgoing traffic (no egress rules provided)
