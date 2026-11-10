@@ -1,0 +1,2 @@
+# K8s_Network_Policies
+KUBERNETES NETWORK POLICIES
